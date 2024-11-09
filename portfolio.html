@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Management</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .portfolio-item {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: bottom;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      position: center;
+    }
+
+    .button {
+      display: inline-block;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 8px 8px;
+      background-color: whitesmoke; 
+      color: black;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: lightblue; 
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portfolio Management</h1>
+    <a href="MAIN .html" class="button" style="color: black;">Home</a>
+  </header>
+
+  <div class="container">
+    <div class="portfolio">
+      <div class="portfolio-item" id="stocks">
+        <h2>Stocks</h2>
+        <div class="input-group">
+          <label for="stock-name">Name:</label>
+          <input type="text" id="stock-name" name="stock-name">
+        </div>
+        <div class="input-group">
+          <label for="stock-quantity">Quantity:</label>
+          <input type="number" id="stock-quantity" name="stock-quantity">
+        </div>
+        <button onclick="addStock()">Add Stock</button>
+      </div>
+      <div class="portfolio-item" id="bonds">
+        <h2>Bonds</h2>
+        <div class="input-group">
+          <label for="bond-name">Name:</label>
+          <input type="text" id="bond-name" name="bond-name">
+        </div>
+        <div class="input-group">
+          <label for="bond-quantity">Quantity:</label>
+          <input type="number" id="bond-quantity" name="bond-quantity">
+        </div>
+        <button onclick="addBond()">Add Bond</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" style="height: 100px; width: 100%; overflow: auto;">
+    <p id="portfolioData">&copy; 2024 Marcellus</p>
+  </footer>
+
+  <script>
+    let stocksData = [];
+    let bondsData = [];
+
+    function addStock() {
+      const stockName = document.getElementById('stock-name').value;
+      const stockQuantity = document.getElementById('stock-quantity').value;
+      stocksData.push({ name: stockName, quantity: stockQuantity });
+      updatePortfolio();
+    }
+
+    function addBond() {
+      const bondName = document.getElementById('bond-name').value;
+      const bondQuantity = document.getElementById('bond-quantity').value;
+      bondsData.push({ name: bondName, quantity: bondQuantity });
+      updatePortfolio();
+    }
+
+    function updatePortfolio() {
+      let portfolioHTML = '<h2>Portfolio</h2>';
+      portfolioHTML += '<h3>Stocks</h3>';
+      stocksData.forEach(stock => {
+        portfolioHTML += `<p>Name: ${stock.name}, Quantity: ${stock.quantity}</p>`;
+      });
+      portfolioHTML += '<h3>Bonds</h3>';
+      bondsData.forEach(bond => {
+        portfolioHTML += `<p>Name: ${bond.name}, Quantity: ${bond.quantity}</p>`;
+      });
+      document.getElementById('portfolioData').innerHTML = portfolioHTML;
+    }
+  </script>
+</body>
+</html>

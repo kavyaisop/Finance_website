@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+
+    #contact-form {
+        width: 600px;
+        margin: 50px auto;
+        background-color:black;
+        padding: 40px;
+        backface-visibility: visible;
+        opacity: initial;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        color:whitesmoke;
+    }
+
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        box-shadow: 0 0 2px 1px rgba(0, 127, 255, 0.5);
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+        backface-visibility: visible;
+        opacity: initial;
+    }
+
+    .label {
+        display: block;
+        margin-bottom: 10px;
+        color:white;
+        backface-visibility: visible;
+    }
+    body
+       {
+             background: url(mount.png);
+             background-attachment: fixed;
+             background-repeat: no-repeat;
+             background-size: 100% 100%;
+             background-color: black;
+             backface-visibility: visible;
+       }
+       .footer {
+      background-color:black;
+      padding: 20px 0;
+      text-align: center;
+      position: bottom;
+      bottom: 0;
+      width: 100%;
+      color: whitesmoke;
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color:whitesmoke;
+      text-decoration:none;
+      margin: 0 10px;
+    }
+    
+    .footer a:hover {
+      color: #333;
+    }
+
+    .footer .button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .footer .button:hover {
+      background-color: cyan;
+    }
+
+
+
+</style>
+<title>Financial Website Contact Form</title>
+</head>
+<body>
+    <form action="./address.html">
+<div id="contact-form">
+<h2>Contact Us</h2>
+<form action="#" method="post">
+<label class="label" for="name">Name:</label>
+<input type="text" name="name" placeholder="Your name" id="name" required>
+<label class="label" for="email">Email:</label>
+<input type="email" name="email" placeholder="Your email" id="email" required>
+<label class="label" for="subject">Subject:</label>
+<input type="text" name="subject" placeholder="The subject" id="subject" required>
+<label class="label" for="message">Message:</label>
+<textarea name="message" placeholder="Your message" id="message" rows="4" required></textarea>
+<input type="submit" value="Submit">
+</form>
+</div>
+<footer class="footer">
+    <a href="./MAIN .html">Home</a>
+    <a href="./investnow.html">Services</a>
+    <a href="./aboutus.html">About Us</a>
+    <a href="./connect.html">Contact</a>
+    <button class="button">Get Started</button>
+    <button class="button">Learn More</button>
+    <p>&copy; 2024 Marcellus   | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+  
+</body>
+</html>

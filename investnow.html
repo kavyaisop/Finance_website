@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investment Recommendation AI</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #recommendation {
+        margin-top: 20px;
+        text-align: left;
+    }
+    body
+       {
+             background: url(investment.jpg);
+             background-attachment: fixed;
+             background-repeat: no-repeat;
+             background-size: 100% 100%;
+             background-color: black;
+       }
+
+       .button {
+      display: inline-block;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 8px 8px;
+      background-color: #007bff; 
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #0056b3; 
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Investment Recommendation AI</h1>
+    <label for="investmentAmount">Enter your investment amount:</label>
+    <input type="number" id="investmentAmount" placeholder="Enter amount in INR">
+    <button onclick="recommendInvestment()">Get Recommendation</button>
+
+    <a href="portfolio.html", class="button">Portfolio Management</a>
+    
+    <div id="recommendation"></div>
+</div>
+
+<script>
+function recommendInvestment() {
+    var investmentAmount = parseFloat(document.getElementById('investmentAmount').value);
+    if (isNaN(investmentAmount) || investmentAmount <= 0) {
+        alert("Please enter a valid investment amount.");
+        return;
+    }
+
+    var recommendation = getInvestmentRecommendation(investmentAmount);
+    document.getElementById('recommendation').innerHTML = "<strong>Recommendation:</strong> " + recommendation;
+}
+
+function getInvestmentRecommendation(amount) {
+    if (amount < 1000) {
+        return "Consider investing in a high-yield savings account or a low-risk bond fund.";
+    } else if (amount >= 1000 && amount < 100000) {
+        return "You may want to diversify your investments with a mix of stocks and bonds.";
+    } else if (amount >= 10000 && amount < 500000) {
+        return "Consider investing in index funds or ETFs for broad market exposure.";
+    } else if (amount >= 50000 && amount < 10000000  ) {
+        return "Explore opportunities in real estate investment trusts (REITs) for stable income.";
+    } else {
+        return "With a significant investment amount, consider consulting with a financial advisor for personalized investment strategies.";
+    }
+}
+</script>
+</body>
+</html>

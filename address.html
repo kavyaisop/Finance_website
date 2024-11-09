@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: black;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: whitesmoke;
+}
+
+.company-name {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 40px;
+}
+
+.info-section {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.info-section h2 {
+  margin-bottom: 10px;
+}
+
+.map {
+  height: 200px;
+  width: 100%;
+}
+.footer {
+      background-color:black;
+      padding: 20px 0;
+      text-align: center;
+      position: bottom;
+      bottom: 0;
+      width: 100%;
+      color: whitesmoke;
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color:whitesmoke;
+      text-decoration:none;
+      margin: 0 10px;
+    }
+    
+    .footer a:hover {
+      color: #333;
+    }
+
+    .footer .button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .footer .button:hover {
+      background-color: cyan;
+    }
+
+
+
+  </style>
+  <title>Company Information</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="company-name">MARCELLUS</h1>
+    <div class="info-container">
+      <div class="info-section">
+        <h2>Address:</h2>
+        <p>A\1702 Anant Bhoomi Mahavir Nagar Kandivali West Mumbai-400067</p>
+      </div>
+      <div class="info-section">
+        <h2>Location:</h2>
+        <div id="map" class="map"><a href="https://www.google.com/maps/place/Anant+Bhoomi/@19.2088011,72.8365822,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7b6cfe61a1c13:0xaf2b7d6b2fd3df38!8m2!3d19.2087961!4d72.8391571!16s%2Fg%2F11xs0cdfv?entry=ttu">Location </a></div>
+      </div>
+      <div class="info-section">
+        <h2>Work Timings:</h2>
+        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+      </div>
+      <div class="info-section">
+        <h2>Phone Number:</h2>
+        <p>+91 9372867657</p>
+      </div>
+      <div class="info-section">
+        <h2>Website:</h2>
+        <a href="./MAIN .html" target="_blank">MARCELLUS</a>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <a href="./MAIN .html">Home</a>
+    <a href="./investnow.html">Services</a>
+    <a href="./aboutus.html">About Us</a>
+    <a href="./connect.html">Contact</a>
+    <button class="button">Get Started</button>
+    <button class="button">Learn More</button>
+    <p>&copy; 2024 Marcellus   | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+  
+</body>
+</html>
